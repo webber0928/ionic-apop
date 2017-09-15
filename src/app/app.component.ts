@@ -12,6 +12,7 @@ import { MapPage } from '../pages/map/map';
 import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
 import { TutorialPage } from '../pages/tutorial/tutorial';
+import { WbPage } from '../pages/wb/wb';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 import { SupportPage } from '../pages/support/support';
@@ -122,6 +123,10 @@ export class ConferenceApp {
 
   openTutorial() {
     this.nav.setRoot(TutorialPage);
+  }
+
+  openWb() {
+    this.nav.setRoot(WbPage);
   }
 
   listenToLoginEvents() {
