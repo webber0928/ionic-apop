@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-  <div text-center *ngIf="speaker">
+  <div *ngIf="speaker">
     <h1>{{speaker.title}}</h1>
     <p>{{speaker.MainMenu.name}}</p>
     <p>{{speaker.newsBy}}</p>
@@ -16,6 +16,4 @@
 
     <div [innerHTML]="speaker.content"></div>
   </div>
-
-  <p>{{speaker?.about}}</p>
 </ion-content>
