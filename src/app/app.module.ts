@@ -25,11 +25,13 @@ import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WbPage } from '../pages/wb/wb';
+import { WbDetailPage } from '../pages/wb-detail/wb-detail';
 import { SupportPage } from '../pages/support/support';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 import { WbData } from '../providers/wb-data';
+import { NewsData } from '../providers/news-data';
 
 
 @NgModule({
@@ -49,6 +51,7 @@ import { WbData } from '../providers/wb-data';
     TabsPage,
     TutorialPage,
     WbPage,
+    WbDetailPage,
     SupportPage
   ],
   imports: [
@@ -66,6 +69,7 @@ import { WbData } from '../providers/wb-data';
         { component: AboutPage, name: 'About', segment: 'about' },
         { component: TutorialPage, name: 'Tutorial', segment: 'tutorial' },
         { component: WbPage, name: 'Wb', segment: 'wb' },
+        { component: WbDetailPage, name: 'WbDetailPage', segment: 'wbDetail/:wbId' },
         { component: SupportPage, name: 'SupportPage', segment: 'support' },
         { component: LoginPage, name: 'LoginPage', segment: 'login' },
         { component: AccountPage, name: 'AccountPage', segment: 'account' },
@@ -91,6 +95,7 @@ import { WbData } from '../providers/wb-data';
     TabsPage,
     TutorialPage,
     WbPage,
+    WbDetailPage,
     SupportPage
   ],
   providers: [
@@ -98,6 +103,7 @@ import { WbData } from '../providers/wb-data';
     ConferenceData,
     UserData,
     WbData,
+    NewsData,
     InAppBrowser,
     SplashScreen
   ]
