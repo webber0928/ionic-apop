@@ -1,6 +1,6 @@
 {
-  "name": "Ionic Conference",
-  "short_name": "Ionic Conf",
+  "name": "傻眼貓咪",
+  "short_name": "傻眼",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
@@ -8,6 +8,6 @@
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "background_color": "#387ef5",
-  "theme_color": "#387ef5"
+  "background_color": "#ffcc22",
+  "theme_color": "#ffcc22"
 }
