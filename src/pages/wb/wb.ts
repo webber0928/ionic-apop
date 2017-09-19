@@ -11,8 +11,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { WbData } from '../../providers/wb-data';
 
-import { SessionDetailPage } from '../session-detail/session-detail';
-import { SpeakerDetailPage } from '../speaker-detail/speaker-detail';
+import { WbDetailPage } from '../wb-detail/wb-detail';
 
 // TODO remove
 export interface ActionSheetButton {
@@ -41,17 +40,14 @@ export class WbPage {
   }
 
   ionViewDidLoad() {
-    this.confData.getSpeakers().subscribe((speakers: any[]) => {
+    this.confData.getWbs().subscribe((speakers: any[]) => {
       this.speakers = speakers;
     });
   }
 
-  goToSessionDetail(session: any) {
-    this.navCtrl.push(SessionDetailPage, { sessionId: session.id });
-  }
-
   goToSpeakerDetail(speaker: any) {
-    this.navCtrl.push(SpeakerDetailPage, { speakerId: speaker.id });
+    console.log('L49',WbDetailPage, speaker.sn)
+    this.navCtrl.push(WbDetailPage, { wbId: speaker.sn });
   }
 
   goToSpeakerTwitter(speaker: any) {
