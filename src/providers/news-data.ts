@@ -26,12 +26,7 @@ export class NewsData {
   }
 
   processData(data: any) {
-    // just some good 'ol JS fun with objects and arrays
-    // build up the data by linking speakers to sessions
     this.data = data.json();
-
-    console.log(this.data, 'L32')
-
     this.data.tracks = [];
 
     return this.data;
