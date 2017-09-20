@@ -10,7 +10,7 @@ import 'rxjs/add/observable/of';
 
 
 @Injectable()
-export class WbData {
+export class CategoriesData {
   data: any;
 
   constructor(public http: Http, public user: UserData) { }
@@ -19,7 +19,7 @@ export class WbData {
     if (this.data) {
       return Observable.of(this.data);
     } else {
-      return this.http.get('https://devapi.nownews.com/news')
+      return this.http.get('http://35.201.150.36/categories')
         .map(this.processData, this);
     }
   }
@@ -34,10 +34,10 @@ export class WbData {
     return this.data;
   }
 
-  getWbs() {
+  getCategories() {
     return this.load().map((data: any) => {
-      // console.log(data.newsList, 'L145');
-      return data.newsList;
+      console.log(data, 'L145');
+      return data;
     });
   }
 
