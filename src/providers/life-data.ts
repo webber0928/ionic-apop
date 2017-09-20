@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 
 @Injectable()
-export class NewsData {
+export class LifeData {
   data: any;
 
   constructor(public http: Http) {}
@@ -16,7 +16,7 @@ export class NewsData {
     if (this.data) {
       return Observable.of(this.data);
     } else {
-      return this.http.get('http://35.201.150.36/categories/2')
+      return this.http.get('http://35.201.150.36/categories/1')
         .map(this.processData, this);
     }
   }

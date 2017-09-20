@@ -11,31 +11,29 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { ConferenceApp } from './app.component';
 
-import { AccountPage } from '../pages/account/account';
-import { LoginPage } from '../pages/login/login';
-import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
-import { TutorialPage } from '../pages/tutorial/tutorial';
-import { WbPage } from '../pages/wb/wb';
-import { WbDetailPage } from '../pages/wb-detail/wb-detail';
+import { NewsPage } from '../pages/news/news';
+import { TaiwanPage } from '../pages/taiwan/news';
+import { WorldPage } from '../pages/world/news';
+import { LifePage } from '../pages/life/news';
+import { OneDetailPage } from '../pages/one-detail/one-detail';
 
-import { ConferenceData } from '../providers/conference-data';
-import { UserData } from '../providers/user-data';
-import { WbData } from '../providers/wb-data';
 import { NewsData } from '../providers/news-data';
-import { CategoriesData } from '../providers/categories-data';
+import { TaiwanData } from '../providers/taiwan-data';
+import { LifeData } from '../providers/life-data';
+import { WorldData } from '../providers/world-data';
+import { OneData } from '../providers/one-data';
 
 
 @NgModule({
   declarations: [
     ConferenceApp,
-    AccountPage,
-    LoginPage,
-    SignupPage,
     TabsPage,
-    TutorialPage,
-    WbPage,
-    WbDetailPage,
+    NewsPage,
+    TaiwanPage,
+    WorldPage,
+    LifePage,
+    OneDetailPage,
   ],
   imports: [
     BrowserModule,
@@ -43,12 +41,10 @@ import { CategoriesData } from '../providers/categories-data';
     IonicModule.forRoot(ConferenceApp, {}, {
       links: [
         { component: TabsPage, name: 'TabsPage', segment: 'tabs-page' },
-        { component: TutorialPage, name: 'Tutorial', segment: 'tutorial' },
-        { component: WbPage, name: 'Wb', segment: 'wb' },
-        { component: WbDetailPage, name: 'WbDetailPage', segment: 'wbDetail/:wbId' },
-        { component: LoginPage, name: 'LoginPage', segment: 'login' },
-        { component: AccountPage, name: 'AccountPage', segment: 'account' },
-        { component: SignupPage, name: 'SignupPage', segment: 'signup' }
+        { component: NewsPage, name: 'NewsPage', segment: 'news' },
+        { component: TaiwanPage, name: 'TaiwanPage', segment: 'taiwan' },
+        { component: WorldPage, name: 'WorldPage', segment: 'world' },
+        { component: LifePage, name: 'LifePage', segment: 'life' },
       ]
     }),
     IonicStorageModule.forRoot()
@@ -56,21 +52,20 @@ import { CategoriesData } from '../providers/categories-data';
   bootstrap: [IonicApp],
   entryComponents: [
     ConferenceApp,
-    AccountPage,
-    LoginPage,
-    SignupPage,
     TabsPage,
-    TutorialPage,
-    WbPage,
-    WbDetailPage
+    NewsPage,
+    TaiwanPage,
+    WorldPage,
+    LifePage,
+    OneDetailPage,
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    ConferenceData,
-    UserData,
-    CategoriesData,
-    WbData,
     NewsData,
+    TaiwanData,
+    LifeData,
+    WorldData,
+    OneData,
     InAppBrowser,
     SplashScreen
   ]
