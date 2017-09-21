@@ -35,35 +35,3 @@
   $next: breakpoint-next($name, $breakpoints);
   @return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
 }
-
-
-// Creates text alignment classes based on screen size
-// TODO this would be nice to add to the framework
-@each $breakpoint in map-keys($grid-breakpoints) {
-  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-    // Provide text `[text-{bp}]` attributes for aligning text based on screen size
-    [text#{$infix}-center] {
-      text-align: center;
-    }
-
-    [text#{$infix}-left] {
-      text-align: left;
-    }
-
-    [text#{$infix}-right] {
-      text-align: right;
-    }
-
-    [hidden#{$infix}-up] {
-      display: none;
-    }
-  }
-
-  @include media-breakpoint-down($breakpoint, $grid-breakpoints) {
-    [hidden#{$infix}-down] {
-      display: none;
-    }
-  }
-}

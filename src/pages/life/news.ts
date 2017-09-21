@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
-
 import { LifeData } from '../../providers/life-data';
 import { OneDetailPage } from '../one-detail/one-detail';
 
